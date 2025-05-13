@@ -92,7 +92,15 @@
                             </tr>
                         </table>
                     </div>
-
+                    <div id="stockPrice">
+                        <form id="watch-form" style="padding-bottom: 5px;">
+                            <input type="text" required placeholder="Watch List">
+                        </form>
+                        <div class="column">
+                            <table id="priceTable" border="1"></table>
+                            <ul id="watch-list"></ul>
+                        </div>
+                    </div>
                     <iframe height="200" width="95%"
                     src="https://sslcharts.investing.com/index.php?force_lang=18&pair_ID=650&timescale=86400&candles=1000&style=line"></iframe>
                 </div>
@@ -137,42 +145,8 @@
                 </a>
 
             </div>
-            <div class="column">
-                <div style="width:30%; padding-right: 6px" >
-                    <div id="stockPrice">
-                        <form id="watch-form" style="padding-bottom: 5px;">
-                            <input type="text" required placeholder="Watch List">
-                        </form>
-                        <div class="column">
-                            <table id="priceTable" border="1"></table>
-                            <ul id="watch-list"></ul>
-                        </div>
-                    </div>
 
-                </div>
-                <div style="width:40%">
-                    <form id="naver-search" style="padding-bottom: 10px;">
-                        <input type="text" required placeholder="Naver Search">
-                    </form>
-                    <form id="todo-form">
-                        <input type="text" required placeholder="What to do?">
-                    </form>
-                    <ul id="todo-list"></ul>
-                </div>
-                <div id="music-div" style="width:30%; padding-right: 6px">
-                    <form id="music-link" style="padding-bottom: 10px;">
-                        <input type="text" required placeholder="link">
-                    </form>
-                    <ul id="music-list"></ul>
-                    <iframe id="youtube" width=100% src="" 
-                    title="YouTube video player" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
-                    scrolling="yes" align="right"> iframe이 있어던 자리 입니다 </iframe>
-                </div>
-            </div>
-            <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Asia%2FSeoul&bgcolor=%23ffffff&showTitle=0&showPrint=0&showTabs=0&showTz=0&src=Z2hsZWUxMjI5QGdtYWlsLmNvbQ&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZmFtaWx5MDkzMjk1MjEzMDM2MjczNzg1MDZAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=a28uc291dGhfa29yZWEjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986CB&color=%2333B679&color=%239E69AF&color=%230B8043" 
-            style="border:solid 1px #777" width="930" height="600" frameborder="0" scrolling="no">
-            </iframe>
+
             <div id="quiz" style="width:100%; padding-left: 10px; padding-top: 30px;">
                 <h2 style="display: inline;">Radiology Quiz : </h2>
                 <a href="https://www.ultrasound.or.kr/case/index.php?" target="_blank" rel="noreferrer noopener" class="button-link">
