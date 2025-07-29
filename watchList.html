@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Watch List</title>
+  <style>
+    body {
+      background-color: #121212; /* 검정 배경 */
+      color: white;              /* 흰 글씨 */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    input[type="text"] {
+      background-color: #1e1e1e;
+      color: white;
+      border: 1px solid #444;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    textarea {
+      background-color: #1e1e1e;
+      color: white;
+      border: 1px solid #444;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      border: 1px solid #666;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    li {
+      background-color: #292238;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+  </style>
+</head>
+<body>
+  <div style="width:100%; padding-right: 2px;">
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container" style="width:100%; padding-left: 50px;">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+      {
+      "market": "america",
+      "showToolbar": true,
+      "defaultColumn": "overview",
+      "defaultScreen": "above_52wk_high",
+      "isTransparent": false,
+      "locale": "en",
+      "colorTheme": "dark",
+      "width": "90%",
+      "height": 400
+    }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+    
+    <div class="row" style="width: 200%;">
+      <div id="stockPrice" class="row" style="width: 100%; align-items: flex-start; margin-top: 20px; justify-content: flex-end;">
+        <div class="column" style="width: 70%;">
+          <div class="column" style="margin-top: 100px; align-items: flex-end; padding-right: 20px;">
+            <button onclick="loadFromSheet()" style="width:16%;">Update from Sheet</button>
+            <form id="watchList-form" style="padding-bottom: 5px; text-align: left;">
+              <input type="text" required placeholder="Watch List" style="width:100%;">
+            </form>
+          </div>
+          <ul id="watchList-list" style="list-style: none; margin: 0; padding: 0;"></ul>
+        </div>
+  
+        <iframe 
+        src="https://docs.google.com/spreadsheets/d/1TLSxhA2vpDmesfNaMoofD7Xf04CswB6bdxg3_fN7GQ0/edit?usp=sharing" 
+        width="30%" 
+        height="10000" 
+        frameborder="0"
+        style="margin-top: 20px; border: 1px solid #444;">
+        </iframe>
+      </div>
+  
+      <div id="KRstockPrice" class="row" style="width: 100%; align-items: flex-start; margin-top: 20px; justify-content: center;">
+        <iframe 
+        src="https://docs.google.com/spreadsheets/d/1TLSxhA2vpDmesfNaMoofD7Xf04CswB6bdxg3_fN7GQ0/edit?usp=sharing#gid=640910317" 
+        width="95%" 
+        height="10000" 
+        frameborder="0"
+        style="margin-top: 20px; border: 1px solid #444;">
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <script src="js/watchList.js"></script>
+</body>
+</html>
