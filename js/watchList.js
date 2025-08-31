@@ -30,9 +30,33 @@ function loadFromSheet() {
         Watchs.push(newWatchObj);
         paintWatch(newWatchObj);
       });
+
+      // ✅ Intersection Observer를 사용하여 차트 지연 로딩
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            // 화면에 보이는 요소일 경우
+            const li = entry.target;
+            const iframes = li.querySelectorAll("iframe[data-src]");
+            iframes.forEach(iframe => {
+              if (iframe.dataset.src) {
+                iframe.src = iframe.dataset.src; // data-src 값을 src로 옮겨 차트 로드
+                delete iframe.dataset.src; // 로드 후 data-src 속성 제거
+              }
+            });
+            // 더 이상 감시할 필요가 없으므로 관찰 중단
+            observer.unobserve(li);
+          }
+        });
+      }, { rootMargin: '0px 0px 100px 0px' }); // 뷰포트보다 100px 아래에 있을 때 미리 로드
+
+      // 모든 li 요소를 관찰 대상에 추가
+      const listItems = WatchList.querySelectorAll('li');
+      listItems.forEach(item => {
+        observer.observe(item);
+      });
     });
 }
-
 
 function paintWatch(newWatchObj) {
   const li = document.createElement("li");
@@ -43,14 +67,16 @@ function paintWatch(newWatchObj) {
   li.style.marginBottom = "10px";
 
   const iframeW = document.createElement("iframe");
-  iframeW.src = `https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${newWatchObj.id}_W&symbol=${newWatchObj.text}&interval=W&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=true&hide_side_toolbar=true&hide_top_toolbar=false&allow_symbol_change=true&details=false&calendar=false&studies=[]&autosize=true&compareSymbols=[{"symbol":%20"NASDAQ:QQQ","position":%20"SameScale"}]`;
+  // ✅ src 대신 data-src 속성에 URL 저장
+  iframeW.dataset.src = `https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${newWatchObj.id}_W&symbol=${newWatchObj.text}&interval=W&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=true&hide_side_toolbar=true&hide_top_toolbar=false&allow_symbol_change=true&details=false&calendar=false&studies=[]&autosize=true&compareSymbols=[{"symbol":%20"NASDAQ:QQQ","position":%20"SameScale"}]`;
   iframeW.style.width = "50%";
   iframeW.style.height = "300px";
   iframeW.style.border = "none";
   iframeW.allowFullscreen = true;
 
   const iframeD = document.createElement("iframe");
-  iframeD.src = `https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${newWatchObj.id}_D&symbol=${newWatchObj.text}&interval=D&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=true&hide_side_toolbar=true&hide_top_toolbar=false&allow_symbol_change=true&details=false&calendar=false&studies=[]&autosize=true`;
+  // ✅ src 대신 data-src 속성에 URL 저장
+  iframeD.dataset.src = `https://s.tradingview.com/widgetembed/?frameElementId=tradingview_${newWatchObj.id}_D&symbol=${newWatchObj.text}&interval=D&theme=dark&style=1&timezone=Etc%2FUTC&withdateranges=true&hide_side_toolbar=true&hide_top_toolbar=false&allow_symbol_change=true&details=false&calendar=false&studies=[]&autosize=true`;
   iframeD.style.width = "50%";
   iframeD.style.height = "300px";
   iframeD.style.border = "none";
