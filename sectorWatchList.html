@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sectors</title>
+  <style>
+    body {
+      background-color: #121212; /* 검정 배경 */
+      color: white;              /* 흰 글씨 */
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+
+    input[type="text"] {
+      background-color: #1e1e1e;
+      color: white;
+      border: 1px solid #444;
+      padding: 8px;
+      border-radius: 4px;
+    }
+
+    textarea {
+      background-color: #1e1e1e;
+      color: white;
+      border: 1px solid #444;
+      padding: 6px;
+      border-radius: 4px;
+    }
+
+    button {
+      background-color: #333;
+      color: white;
+      border: 1px solid #666;
+      padding: 5px 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+
+    li {
+      background-color: #292238;
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .row {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    .button-link {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #545454;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+  <div style="width:100%; padding-right: 2px;"> 
+    <div class="row" style="width: 100%">
+      <div class="column" style="width: 85%">
+        <div id="index" class="row" style="width: 100%; height: 300px;">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+            "allow_symbol_change": true,
+            "calendar": false,
+            "details": false,
+            "hide_side_toolbar": true,
+            "hide_top_toolbar": false,
+            "hide_legend": false,
+            "hide_volume": false,
+            "hotlist": false,
+            "interval": "D",
+            "locale": "en",
+            "save_image": true,
+            "style": "1",
+            "symbol": "QQQ",
+            "theme": "dark",
+            "timezone": "Etc/UTC",
+            "backgroundColor": "#0F0F0F",
+            "gridColor": "rgba(242, 242, 242, 0.06)",
+            "watchlist": [],
+            "withdateranges": false,
+            "compareSymbols": [],
+            "studies": [
+              "STD;MA%1Cross"
+            ],
+            "autosize": true
+          }
+            </script>
+          </div>
+          <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+            "allow_symbol_change": true,
+            "calendar": false,
+            "details": false,
+            "hide_side_toolbar": true,
+            "hide_top_toolbar": false,
+            "hide_legend": false,
+            "hide_volume": false,
+            "hotlist": false,
+            "interval": "W",
+            "locale": "en",
+            "save_image": true,
+            "style": "1",
+            "symbol": "QQQ",
+            "theme": "dark",
+            "timezone": "Etc/UTC",
+            "backgroundColor": "#0F0F0F",
+            "gridColor": "rgba(242, 242, 242, 0.06)",
+            "watchlist": [],
+            "withdateranges": false,
+            "compareSymbols": [],
+            "studies": [
+              "STD;SMA", 
+              "STD;EMA"
+            ],
+            "autosize": true
+          }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+        <div id="index" class="row" style="width: 100%; height: 300px;">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+            "allow_symbol_change": true,
+            "calendar": false,
+            "details": false,
+            "hide_side_toolbar": true,
+            "hide_top_toolbar": false,
+            "hide_legend": false,
+            "hide_volume": false,
+            "hotlist": false,
+            "interval": "D",
+            "locale": "en",
+            "save_image": true,
+            "style": "1",
+            "symbol": "SPY",
+            "theme": "dark",
+            "timezone": "Etc/UTC",
+            "backgroundColor": "#0F0F0F",
+            "gridColor": "rgba(242, 242, 242, 0.06)",
+            "watchlist": [],
+            "withdateranges": false,
+            "compareSymbols": [],
+            "studies": [
+              "STD;MA%1Cross"
+            ],
+            "autosize": true
+          }
+            </script>
+          </div>
+          <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+            "allow_symbol_change": true,
+            "calendar": false,
+            "details": false,
+            "hide_side_toolbar": true,
+            "hide_top_toolbar": false,
+            "hide_legend": false,
+            "hide_volume": false,
+            "hotlist": false,
+            "interval": "W",
+            "locale": "en",
+            "save_image": true,
+            "style": "1",
+            "symbol": "SPY",
+            "theme": "dark",
+            "timezone": "Etc/UTC",
+            "backgroundColor": "#0F0F0F",
+            "gridColor": "rgba(242, 242, 242, 0.06)",
+            "watchlist": [],
+            "withdateranges": false,
+            "compareSymbols": [],
+            "studies": [
+              "STD;SMA", 
+              "STD;EMA"
+            ],
+            "autosize": true
+          }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+        <div id="index" class="row" style="width: 100%; height: 300px;">
+          <!-- TradingView Widget BEGIN -->
+          <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+            "allow_symbol_change": true,
+            "calendar": false,
+            "details": false,
+            "hide_side_toolbar": true,
+            "hide_top_toolbar": false,
+            "hide_legend": false,
+            "hide_volume": false,
+            "hotlist": false,
+            "interval": "D",
+            "locale": "en",
+            "save_image": true,
+            "style": "1",
+            "symbol": "BTCUSD",
+            "theme": "dark",
+            "timezone": "Etc/UTC",
+            "backgroundColor": "#0F0F0F",
+            "gridColor": "rgba(242, 242, 242, 0.06)",
+            "watchlist": [],
+            "withdateranges": false,
+            "compareSymbols": [],
+            "studies": [
+              "STD;MA%1Cross"
+            ],
+            "autosize": true
+          }
+            </script>
+          </div>
+          <div class="tradingview-widget-container" style="height:100%;width:100%">
+            <div class="tradingview-widget-container__widget" style="height:calc(100% - 32px);width:100%"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
+            {
+            "allow_symbol_change": true,
+            "calendar": false,
+            "details": false,
+            "hide_side_toolbar": true,
+            "hide_top_toolbar": false,
+            "hide_legend": false,
+            "hide_volume": false,
+            "hotlist": false,
+            "interval": "W",
+            "locale": "en",
+            "save_image": true,
+            "style": "1",
+            "symbol": "BTCUSD",
+            "theme": "dark",
+            "timezone": "Etc/UTC",
+            "backgroundColor": "#0F0F0F",
+            "gridColor": "rgba(242, 242, 242, 0.06)",
+            "watchlist": [],
+            "withdateranges": false,
+            "compareSymbols": [],
+            "studies": [
+              "STD;SMA", 
+              "STD;EMA"
+            ],
+            "autosize": true
+          }
+            </script>
+          </div>
+          <!-- TradingView Widget END -->
+        </div>
+      </div>
+      <div class="column" style="width: 15%">
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container">
+          <div class="tradingview-widget-container__widget"></div>
+          <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/FX_IDC-USDKRW/?exchange=FX_IDC" rel="noopener nofollow" target="_blank"><span class="blue-text">USDKRW chart by TradingView</span></a></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+          {
+          "symbol": "FX_IDC:USDKRW",
+          "chartOnly": false,
+          "dateRange": "12M",
+          "noTimeScale": false,
+          "colorTheme": "dark",
+          "isTransparent": false,
+          "locale": "en",
+          "width": "100%",
+          "autosize": true,
+          "height": "25%"
+          }
+          </script>
+
+
+        </div>
+        <!-- TradingView Widget END -->
+        <a href="https://kr.tradingview.com/heatmap/etf/#%7B%22dataSource%22%3A%22AllUSEtf%22%2C%22blockColor%22%3A%22nav_total_return.3M%22%2C%22blockSize%22%3A%22aum%22%2C%22grouping%22%3A%22asset_class%22%7D" target="_blank" rel="noreferrer noopener">
+          <img src="./img/heatmap_US.png" style="width: 100%;">
+        </a>
+        <a 
+        href="https://kr.tradingview.com/etf-screener/AgpXMAdQ/" 
+        target="_blank" 
+        rel="noreferrer noopener" 
+        class="button-link" 
+        style="height: 15%; background-color: rgb(37, 37, 37); color: white; text-align: center; display: flex; align-items: center; justify-content: center;">
+        KR etf
+      </a>
+      </div>
+
+    </div>
+    
+    <div class="row" style="width: 100%;">
+      <div id="stockPrice" class="row" style="width: 100%; align-items: flex-start; margin-top: 20px; justify-content: flex-end;">
+        <div class="column" style="width: 70%;">
+          <div class="row" style="margin-top: 152px; align-items: flex-end; padding-right: 20px;">
+            <button onclick="loadFromSheet()" style="width:16%;">Update from Sheet</button>
+            <a href="https://docs.google.com/spreadsheets/d/1TLSxhA2vpDmesfNaMoofD7Xf04CswB6bdxg3_fN7GQ0/edit?gid=0#gid=0" target="_blank" rel="noreferrer noopener" class="button-link">US</a>
+            <a href="https://docs.google.com/spreadsheets/d/1TLSxhA2vpDmesfNaMoofD7Xf04CswB6bdxg3_fN7GQ0/edit?gid=640910317#gid=640910317" target="_blank" rel="noreferrer noopener" class="button-link">KR</a>
+          </div>
+          <ul id="watchList-list" style="list-style: none; margin: 0; padding: 0;"></ul>
+          <form id="watchList-form" style="padding-bottom: 5px; text-align: right;">
+            <input type="text" required placeholder="Watch List" style="width:20%;">
+          </form>
+        </div>
+  
+        <iframe 
+        id="googleSheetIframe"
+        src="https://docs.google.com/spreadsheets/d/1TLSxhA2vpDmesfNaMoofD7Xf04CswB6bdxg3_fN7GQ0/edit?usp=sharing&gid=1385150252#gid=1385150252&single=true"
+
+        
+        width="30%" 
+        height="10000" 
+        frameborder="0"
+        style="margin-top: 20px; border: 1px solid #444;">
+        </iframe>
+    </div>
+  </div>
+  <script src="js/sectorWatchList.js"></script>
+</body>
+</html>
